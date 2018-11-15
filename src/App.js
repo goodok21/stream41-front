@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const URL = 'http://159.65.207.28'
+
 class App extends Component {
   render() {
     return (
@@ -9,16 +11,22 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            <code>how are you</code>?
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <div>
+            <h1>Audio</h1>
+            <audio controls type="audio/ogg">
+              <source src={`${URL}/birds.ogg`} type="video/ogg" />
+                Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div>
+            <h1>Video</h1>
+            <video width="320" height="240" controls autoplay="true">
+              <source src={`${URL}/videoplayback`} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </header>
       </div>
     );
